@@ -17,7 +17,7 @@ def my_function(a,b):
         return a/b
 a = int(input("Введите числитель: "))
 b = int(input("Введите знаменатель: "))
-print(my_function(a,b))
+print("Вот результат деления: ", my_function(a,b))
 
 
 
@@ -47,7 +47,7 @@ def my_func(a,b,c):
     list1 = [a,b,c]
     return sum(list1)-min(list1)
             
-print(my_func(23, 3, 3))
+print(my_func(23, 3, 7))
 
 
 
@@ -65,6 +65,7 @@ print(my_func(23, 3, 3))
 
 k=2
 l=-6
+
 def my_func(a,b):
     return a**b
 print(my_func(k, l))
@@ -91,6 +92,57 @@ print(my_func(k, l))
 добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 """
 
+def my_function5 ():
+    a = input("Введите числа через пробел: ")
+    list_new = a.split(" ")
+    for i in range(len(list_new)):
+        if list_new[i].isnumeric():
+            list1.append(int(list_new[i]))
+        else:         
+            return False
+    return True
+
+list1 = []
+x = True
+while x == True:
+    x = my_function5()
+    print(sum(list1))
 
 
+
+
+"""
+6. Реализовать функцию int_func(), принимающую слова из маленьких латинских букв 
+и возвращающую их же, но с прописной первой буквой. 
+Например, print(int_func(‘text’)) -> Text.
+"""
+
+def int_func(input_text):
+    output_text = input_text.capitalize()   
+    return output_text
+
+print(int_func("text"))
+
+
+
+
+
+
+"""
+7. Продолжить работу над заданием. В программу должна попадать строка из слов, 
+разделённых пробелом. Каждое слово состоит из латинских букв в нижнем регистре. 
+Нужно сделать вывод исходной строки, но каждое слово должно начинаться с 
+заглавной буквы. Используйте написанную ранее функцию int_func().
+"""
+
+str7 = "oops i did it again"
+print("Before: ", str7)
+
+list7 = str7.split(" ")
+for i in range(len(list7)):
+    list7[i] = int_func(list7[i])
+    i+=1
+str7 = " ".join(list7)
+
+print("After: ", str7)
 
